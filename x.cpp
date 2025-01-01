@@ -3,29 +3,15 @@ using namespace std;
 
 int main()
 {
-    string t;
-    vector<string> v;
-    while(cin >> t)
+    double s=0;
+    int c;
+    cin>>c;
+    double num;
+    for(int i=0; i<c; i++)
     {
-        v.push_back(t);
+        cin>>num;
+        s+=num;
     }
-    int p = 0;
-    cout << '[';
-    for(int i = v.size()-1 ; i >= 0 ; i--)
-    {
-        for(char c: v[i])
-        {
-            if(p)
-            {
-                cout<<',' ;
-            }
-            else
-            {
-                p = 1;
-            }
-            cout << c;
-        }
-    }
-    cout << ']';
-    return 0;
+    
+    cout <<fixed<<setprecision(1) <<s/c<<endl;
 }
